@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+  display:block;
+}
+    </style>
+</head>
+<body>
+<script>
+
+</script>
+<!-- Basic form -->
+<!--
+<form action="">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"><br>
+    <label>Email: <input type="email" name="email"></label><br>
+
+    <label for="birth">Birth</label>
+    <input type="date" id = "birth" value = "birth"><br>
+    <input type="submit" value = "Click here!">
+</form>
+-->
+<form>
+    <fieldset>
+        <legend>Input Types</legend>
+        <br>
+        <label>Name: <input type = "text" id = "name" name = "name"></label>
+        <label>Email: <input type = "email" name = "email"> </label>
+        <label>Password: <input type= "password" name = "pass"></label>
+        <p>Radio Buttons</p>
+        <label><input type="radio" name="sex" value="male" checked>Male</label>
+        <label><input type="radio" name="sex" value="female">Female</label>
+        <p>Checkboxes</p>
+        <label> <input type="checkbox" name="contact1" value="Bike">Contact me via email</label>
+        <label> <input type="checkbox" name="contact2" value="Bike">Contact me via phone</label>
+        <br>
+        <label>Number: <input type="number" name="numberInput" min="1" max="5"></label>
+        <label>Range: <input type="range" name="rangeInput" min="1" max="10"></label>
+        <br>
+        <label>Color: <input type="color" name="colorInput" min="1" max="10"></label>
+        <br>
+        <label>Date: <input type="date" name="dateInput"></label>
+        <br>
+        <label>URL: <input type="url" name="urlInput"></label>
+        <br>
+        <input type = "submit" value = "Click Here">
+        <br>
+        zip code with pattern: <input type="text" name="zip_codeP" pattern="[0-9]{5}" required><br/>
+        zip code with numbers: <input type="number" name="zip_codeN" min ="00000" max = "99999" required><br/>
+</fieldset>
+</form> 
+
+</body>
+</html>

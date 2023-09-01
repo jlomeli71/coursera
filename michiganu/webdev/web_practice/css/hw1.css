@@ -1,0 +1,49 @@
+header{
+    background:#FFA07A;
+    }
+    h1{
+    color:#17202A;
+    variant:small-caps;
+    text-align:center;
+    }
+    h2{
+    color:#17202A;
+    text-transform:small-caps;
+    }
+    section{
+    background:#D0D3D4;
+    }
+    nav{
+    background:#D0D3D4;
+    text-align:center;
+    }
+    
+/*
+aside {
+    display: none;
+}
+
+header {
+    background: #CCCCCC;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #0000b3;
+    text-transform: uppercase;
+}
+
+section {
+    background: #595959;
+}
+
+a {
+    background: #BDBDBD;
+    color: #000000;
+}
+*/

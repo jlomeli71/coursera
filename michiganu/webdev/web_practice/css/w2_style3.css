@@ -1,0 +1,13 @@
+/* Code Together-1 */
+body {
+	display: table;
+}
+
+div {
+	width: 30%;
+	background: #00FFFF;
+	height: 400px;
+	display: table-cell;
+	float: left;
+	overflow: scroll;
+}

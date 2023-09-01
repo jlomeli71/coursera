@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function setDate(){
+        document.getElementById("data").innerHTML=Date();
+    }
+
+    function message(msg){
+        document.getElementById("output").innerHTML = msg + " event";
+        //alert("This alert box was called with the onload event");
+    }
+    
+    function displayDate(){
+        document.getElementById("demo").innerHTML=Date();
+    }
+    </script>
+</head>
+<body onload = "setDate()">
+    <h1 id = "test">This is a test header</h1>
+
+    <p>The current date is <span id = "data"></span></p>
+
+    <div onclick = "message('Hi')">Clicking on this line will invoke a Javascript function that changes line above</div>
+    <p id = "output">Look here</p>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    
+    <p id = "demo">This is another paragraph</p>
+    <button type="button"
+    onclick = "displayDate()">Display Date</button>
+
+</body>
+<script>
+    // Alert message window
+    // alert("Alert message");
+    
+    // Prompt message window
+    // prompt("Enter your name:")
+    
+    // Write on the page
+    // document.write("Time to learn JavaScript");
+    
+    // Write on the age using a specific element
+    // document.getElementById("test").innerHTML = "Hello JavaScript";
+    
+    // Write on console
+    // console.log("This is a secret message");
+
+    // document.write(document.baseURI+"<br>");
+
+    // Using variables
+    
+    // var name = prompt("What is your name?");
+    // document.write(name);
+
+    // var date = Date();
+    // document.write(date);
+    
+    // var location = window.location;
+    // document.write(location)
+
+    // var name = prompt("What is your name?");
+    // console.log(name)
+
+    /* Data Types
+    - Numerical
+    - String
+    - Boolean
+    - Object (node, )
+    - Array
+    */
+
+    /* Operators and Expresions
+    - =     asigment
+    - +
+    - -
+    - *
+    - /
+    - %
+    - ++    increments by 1
+    - --    decrements by 1
+    - += n  increments by n
+    - ==    is equal
+    - ===   is equal and same type
+    - !==   is not equal and same type
+    - !=    is not equal
+    - >
+    - >=
+    - <
+    - <=
+    - &&    AND
+    - ||    OR
+    - !     NOT
+    */
+
+    // Functions
+    /*
+    function functionName(parameters){
+        code;
+    }
+
+    functionName(parameters);
+    */
+
+    //message();
+
+    // EVents
+    /*
+    - onclick
+    - onmouseover
+    - onresize
+    - onload
+    */
+    
+    
+</script>
+</html>

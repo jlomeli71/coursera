@@ -1,0 +1,28 @@
+/* 
+porsition Properties
+- static (uses next available space)
+- relative (adds offsets)
+- absolute
+- fixed 
+*/
+
+p {
+	border: 1px solid red;
+	width: 50%;
+	position: relative;
+	top: 100px;
+	left: 100px;
+
+	/* The code below removes the default margins */
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+div {
+	position: relative;
+	border: 5px solid black;
+	height: 300px;
+	width: 400px;
+}

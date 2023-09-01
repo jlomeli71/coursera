@@ -1,0 +1,44 @@
+/* 
+Together-3
+ */
+
+ div {
+	box-sizing: border-box;
+	border: 1px solid #000000;
+	width: 100px;
+	height: 100px;
+	margin: 2px;
+	padding: 2px;
+	display: inline-block;
+	transition: 2s ease;
+ }
+
+ div:focus {
+	background-color: #FFFF00;
+ }
+
+ div:hover {
+	width: 200px;
+	background-color: #800040;
+ }
+
+ .animate {
+	background: #92B901;
+	-webkit-transition: -webkit-transform 1s, ;
+	-webkit-border-radius: 5px;
+	-o-transition-property: width, height, ;
+	-o-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+	-moz-transition-property: width, height, ;
+	-moz-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+	transition-property: width, height, transform, ;
+	transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+	opacity: 0.4;
+ }
+
+ .animate:hover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	opacity: 1
+ }

@@ -1,0 +1,28 @@
+/*Can you:
+  1) Put these divs next to each other
+  	-Make the screen smaller, still working?
+  2) Make them taller?
+  3) Can you now center them under each other?
+*/
+
+h2{
+	text-align: center;
+}
+
+div{
+	background-color: #0000CC;
+	color:#ffffff;
+	box-sizing:border-box;
+
+	/*add here*/
+	width: 48%;
+	display: inline-block;
+	height: 300px;
+	margin:3px;
+	border: 20px solid #000000;
+	padding: 20px;
+  	margin: 0 auto;
+	margin-top: 50px;
+}
+
+

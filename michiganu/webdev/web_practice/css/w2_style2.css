@@ -1,0 +1,22 @@
+/* Code Together-1 */
+span {
+	height: 50px;
+	width: 75px;
+	background: #00ff00;
+	display: inline-block;
+	float: none;
+}
+
+div {
+	height: 100px;
+	width: 45%;
+	background: #00ffff;
+	float: left;
+}
+
+p {
+	height: 100px;
+	width: 200px;
+	background: #ff00ff;
+	clear: both;
+}
