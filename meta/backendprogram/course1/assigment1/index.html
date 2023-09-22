@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        form, label, input, submit {
+            padding: 3px;
+            margin:  3px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--    This are comments  -->
+    <p>I successfully created my first document</p>
+    
+    <!--    Line breaks  -->
+    <p>Line 1 <br>Line 2 <br>Line 3</p>
+
+    <!--    Strong  -->
+    <p>No matter how much the dog barks: <strong>don't feed him chocolate</strong>.</p>
+
+    <!--    Bold  -->
+    <p>The primary colors are <b>red</b>, <b>yellow</b> and <b>blue</b>.</p>
+
+    <!--    Emphasis  -->
+    <p>Wake up <em>now</em>!</p>
+
+    <!--    Italics  -->
+    <p>The term <i>HTML</i> stands for HyperText Markup Language.</p>
+
+    <!--    Unordered list example  -->
+    <p>Unordered list example.</p>
+    <ul>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Chocolate</li>
+    </ul>
+
+    <!--    Ordered list example  -->
+    <p>Ordered list example.</p>
+    <ol>
+        <li>Rocky I</li>
+        <li>Rocky II</li>
+        <li>Rocky III</li>
+    </ol>
+
+    <!--    Div tags  -->
+    <div>
+        <p>This is a paragraph inside a div</p>
+    </div>
+
+    <div>
+        <div>
+           <p>This is a paragraph inside a div that’s inside another div</p>
+        </div>
+    </div>
+    <br>
+    <!--   Linking pages  -->
+    <a href="test.html">Link to test page.</a>
+    <br>
+    <!--   Including images  -->
+    <img src="cute-monkey.jpg" width= "220" height="320" alt="Icon">
+    <br>
+    <!--   Including tables  -->
+    <table>
+        <tr>
+            <th>Color</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Blue</td>
+            <td>7</td>
+        </tr>
+    </table>
+    <br>
+    <!--   Including forms  -->
+    <form action="" method="post">
+        <hr>
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password">
+        <br>
+        <hr>
+        <input type="checkbox" name="dog" value="dog" id="dog">
+        <label for="dor">I own a dog</label>
+        <br>
+        <input type="checkbox" name="cat" value="cat" id="cat">
+        <label for="cat">I own a cat</label>
+        <br>
+        <hr>
+        <input type="radio" name="right-left" value="right" id="right">
+        <label for="right">I am right handed</label><br>
+        <input type="radio" name="right-left" value="left" id="left">
+        <label for="right">I am left handed</label><br>        
+        <label for="left"></label>
+        <br>
+        <hr>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--    Now demostrating CSS    -->
+    <h1>The book of none</h1>
+    <h1 id="header1">Chapter One</h1>
+    <p class="paragraph">First chapter</p>
+    <p class="introduction">Introduction</p>
+    <div id="blog">
+        <h1>Latest News</h1>
+        <div>
+          <h1>Today's Weather</h1>
+          <p>The weather will be sunny</p>
+        </div>
+        <p>Subscribe for more news</p>
+      </div>
+      <div>
+        <h1>Archives</h1>
+      </div>
+</body>
+</html>

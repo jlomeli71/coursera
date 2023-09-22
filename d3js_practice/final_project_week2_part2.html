@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif
+        }
+
+        h1 {
+            background-color: #2a5599;
+            /* TODO 1
+            change the text to white and add a padding of 5px
+            2 lines of code
+            */
+            color: white;
+            padding: 5px;
+        }
+
+        /* TODO 2
+        Add code to show a black border of 1px around all SVGs elements in the page
+        1-3 lines of code
+        */
+
+        svg {
+            border-width: 1px; 
+            border-color: black;
+            border-style: solid ;
+        }
+
+        /* TODO 3
+         - Use the "display flex" feature from to show the items from class `mainView` side by side 
+         1-3 lines of cide
+        */
+
+        .mainView {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+    </style>
+    <script src="d3.js"></script> <!-- Adding d3  -->
+</head>
+
+<body>
+    <h1>Airlines Routes</h1>
+    <div class="mainView">
+        <div>
+            <h2>Airlines</h2>
+            <svg id="AirlinesChart"></svg>
+        </div>
+        <div>
+            <h2>Airports</h2>
+            <svg id="Map"></svg>
+        </div>
+    </div>
+</body>
+<!-- Adding script code -->
+<script> 
+    // All your javascript code will go here
+    let store = {}
+
+    function loadData() {
+        let promise = d3.csv("routes.csv")
+        return promise.then(routes => {
+            store.routes = routes;
+            return store;
+    })
+    }
+
+    function groupByAirline(data) {
+    //Iterate over each route, producing a dictionary where the keys is are the airlines ids and the values are the information of the airline.
+    let result = data.reduce((result, d) => {
+        let currentData = result[d.AirlineID] || {
+            "AirlineID": d.AirlineID,
+            "AirlineName": d.AirlineName,
+            "Count": 0
+        }
+        currentData.Count += 1
+        result[d.AirlineID] = currentData
+        return result;
+    }, {})
+
+    //We use this to convert the dictionary produced by the code above, into a list, that will make it easier to create the visualization. 
+    result = Object.keys(result).map(key => result[key])
+    result = result.sort((a, b) => {
+    return d3.descending(a.Count, b.Count);
+         });
+    return result
+    }
+
+    function showData() {
+        //Get the routes from our store variable
+        let routes = store.routes
+        // Compute the number of routes per airline.
+        let airlines = groupByAirline(store.routes);
+        console.log(airlines)
+    }
+
+    loadData().then(showData);
+</script>
+</html>

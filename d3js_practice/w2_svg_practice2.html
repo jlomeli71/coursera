@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+
+<body>
+    <button onclick="addNewClient()">Add</button>
+    <button onclick="removeClient()">Remove</button>
+    <div id="container"></div>
+</body>
+<script src="d3.js"></script>
+<script>
+    let container = d3.select("#container")
+    let clients = [{
+        Name: "Client0"
+    }]
+    let count = 1;
+
+
+    function addNewClient() {
+        clients.push({ Name: "Client" + count })
+        count += 1
+        showData(clients)
+    }
+
+    function removeClient() {
+        clients = clients.slice(0, -1)
+        count -= 1
+        showData(clients)
+    }
+
+    function showData(clients) {
+        
+    }
+    showData(clients)
+
+
+</script>
+
+</html>

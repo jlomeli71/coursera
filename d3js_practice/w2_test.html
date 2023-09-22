@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script src="d3.v7.js"></script>
+<script>
+
+let container= d3.select("#container");   
+let cars = [ 
+  {name:"toyota", price: 50000},
+  {name:"BMW", price:75000},
+  {name:"Tesla", price: 60000},
+  {name:"Jeep", price: 35000}];
+
+let join = container
+	.selectAll("li")
+	.data(cars);
+
+join.enter()
+	.append("li")
+	.text( d=> d.name + " " + d.price )
+
+</script>
+
+</html>
