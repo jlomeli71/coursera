@@ -5,6 +5,23 @@ a multiline
 comment in
 Javascript */
 
+/* Truthy
+In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. 
+All values are truthy unless they are defined as falsy. That is, all values are truthy except:
+- false, 
+- 0, 
+- -0, 
+- 0n, 
+- "", 
+- null, 
+- undefined, 
+- NaN,      
+- document.all    */
+
+/* Falsy
+A falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context. 
+*/
+
 // The console log command
 console.log("hello");
 console.log("%cHello, World", "color: blue; font-size: 40px");
