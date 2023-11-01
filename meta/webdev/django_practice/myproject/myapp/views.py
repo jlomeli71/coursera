@@ -6,18 +6,21 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from myapp.forms import BookingForm
 
+# Added in the Creating Dynamic Templates lab
+from .models import Menu
+
 # Create your views here.
 
-def home(request):
-    path = request.path
-    method = request.method 
-    content = """
-    <center><h2>Testing django request response objects</h2>
-    <p>Request path: {}</p>
-    <p>Request method: {}</p></center>
-    """.format(path, method)
-    content2 = "Welcome to Little Lemon!"
-    return HttpResponse(content2)
+# def home(request):
+#    path = request.path
+#    method = request.method 
+#    content = """
+#    <center><h2>Testing django request response objects</h2>
+#    <p>Request path: {}</p>
+#    <p>Request method: {}</p></center>
+#    """.format(path, method)
+#    content2 = "Welcome to Little Lemon!"
+#    return HttpResponse(content2)
 
 def drinks(request, drink_name):
     drink = {
@@ -29,18 +32,18 @@ def drinks(request, drink_name):
     choice_of_drink = drink[drink_name]
     return HttpResponse(f"<h2>{drink_name}: " + choice_of_drink)
 
-def about(request):
-    about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."}
-    return render(request, "about.html", {'content': about_content})
+# def about(request):
+#    about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."}
+#    return render(request, "about.html", {'content': about_content})
     # return HttpResponse("About us")
 
-def menu(request):
-    about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."}
-    return render(request, "menu.html", {'content': about_content})
-    # return HttpResponse("Menu")
+# def menu(request):
+#     about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."}
+#     return render(request, "menu.html", {'content': about_content})
+#     # return HttpResponse("Menu")
 
-def book(request):
-    return HttpResponse("Make a booking")
+# def book(request):
+#    return HttpResponse("Make a booking")
 
 def form_view(request):
     form = BookingForm()
@@ -50,3 +53,20 @@ def form_view(request):
             form.save()
     context = {"form" : form}
     return render(request, "booking.html", context)
+
+# def menu(request):
+#    menu_items = Menu.objects.all()
+#    items_dict = {"menu": menu_items}
+#    return render(request, "menu.html", items_dict)
+
+def home(request):
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def menu(request):
+    return render(request, 'menu.html')
+
+def book(request):
+    return render(request, 'book.html')
