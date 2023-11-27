@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "open-sans";
+    src: url("./assets/font/OpenSans-VariableFont_wdth\,wght.ttf")
+      format("truetype");
+    font-style: normal;
+  }
+  
+  html {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+  }
+  
+  body {
+    width: 80%;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
+  
+  .grid-item {
+    margin-block-end: 2rem;
+    border-radius: 10px;
+  }
+  
+  .grid-item.one {
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: lightgray;
+  }
+  
+  header {
+    margin-block: 2rem;
+    font-family: open-sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header img {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+  
+  nav {
+    margin-block: 2rem;
+  }
+  
+  nav ul {
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: rgb(80, 80, 80);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: open-sans;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  li a {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: whitesmoke;
+    height: 100%;
+  }
+  
+  li a:hover {
+    background-color: rgb(19, 192, 131);
+  }
+  
+  .hero {
+    background-image: url(assets/img/succulent-close-up.jpg);
+    background-size: contain;
+    border-radius: 10px;
+  }
+  
+  .hero-text {
+    font-family: "open-sans";
+    padding: 1rem;
+    -webkit-text-stroke: 0.1px black;
+  }
+  
+  .hero h2 {
+    color: white;
+  }
+  
+  .hero p {
+    color: white;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 10px;
+  }
+  
+  .grid-item.two {
+    background-color: grey;
+  }
+  
+  .grid-item.three {
+    background-color: grey;
+  }
+  
+  .grid-item.four {
+    background-color: grey;
+  }
+  
+  article {
+    margin: 1rem;
+  }
+  
+  .article-title {
+    font-family: open-sans;
+  }
+  
+  .article-img-center {
+    display: grid;
+    place-items: center;
+  }
+  
+  footer {
+    background-color: grey;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  
+  .footer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid black;
+  }
+  
+  .footer-grid-item2 {
+    text-align: end;
+  }
+  
+  footer img {
+    width: 3rem;
+    height: auto;
+    margin: 0.25rem 0;
+  }
+  
+  article img {
+    height: 18rem;
+    width: fit-content;
+    border-radius: 10px;
+  }

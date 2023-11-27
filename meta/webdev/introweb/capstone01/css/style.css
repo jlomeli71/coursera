@@ -1,0 +1,107 @@
+body {
+    background-color: #FEFAE0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#logo {
+    padding: 1em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+header > img {
+    display: block;
+    margin: auto;
+}
+
+nav {
+    background-color: #B99470;
+    padding: 1em;
+    margin: 0.7em;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: darkgreen;
+}
+nav li a:hover {
+    background-color: #CD5C08;
+}
+
+section {
+    display: flex;
+    
+}
+
+article {
+    flex: 1;
+    background-color: #A9B388;
+    padding: 1em;
+    margin: 1em;
+}
+
+ 
+footer {
+    display: flex;
+    background-color: #B99470;
+    padding: 1em;
+    margin: 0.7em;
+}
+
+footer div {
+    flex: 1;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
+#promo {
+    text-align: center;
+    color: red;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: promoanimation;
+}
+
+@keyframes promoanimationn {
+	from { 
+        color: red;
+        font-weight: 900; 
+    }
+	to { 
+        color: orange;
+        font-weight: 500; 
+    }
+}
+
+#promo_description {
+    font-size: 2em;
+}
+
+.shadow {
+    border: 1px;
+    padding: 1em;
+}
+.shadow:hover {
+    box-shadow: 5px 3px 10px #CD5C08;
+}
